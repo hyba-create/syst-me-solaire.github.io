@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Uranus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Uranus</h1>
+  </header>
+
+  <div class="planet-details">
+    <img src="image8.png" alt="Uranus">
+  </div>
+
+  <div class="definition">
+    <h2>Characteristics</h2>
+    
+    <p><strong>Name:</strong> Uranus</p>
+    <p><strong>Position:</strong> 7th planet in the solar system, third-largest in diameter.</p>
+    <p><strong>Status:</strong> Gas giant. Atmosphere primarily composed of hydrogen, helium, and methane.</p>
+    <p><strong>Other Information:</strong> Uranus is unique in that it rotates on its side, possibly due to a massive collision in its past. This causes extreme seasons lasting over 20 years. Uranus has a faint ring system and 27 known moons, with Titania and Oberon being the largest.</p>
+    <p><strong>Characteristics:</strong>  
+      Tilted axis of rotation, causing extreme seasonal variations. Methane in the atmosphere gives it a blue-green color.
+    </p>
+    <p><strong>Interesting Fact:</strong>  
+      A day on Uranus lasts about 17.25 Earth hours, but its axial tilt means each pole gets around 42 years of continuous sunlight, followed by 42 years of darkness.
+    </p>
+</div>
+
+
+  <br>
+      <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div>
+      <img src="Uranus.mp4" alt="Uranus">
+    </div>
+  </div>
+
+  <div class="comments-section">
+    <h2>Commentaires</h2>
+    <textarea id="comment-input" placeholder="Laissez un commentaire..." rows="4"></textarea>
+    <button id="submit-comment">Publier</button>
+    <div id="comments-container"></div>
+  </div>
+
+  <script>
+    const commentInput = document.getElementById('comment-input');
+    const submitButton = document.getElementById('submit-comment');
+    const commentsContainer = document.getElementById('comments-container');
+
+    submitButton.addEventListener('click', () => {
+      const commentText = commentInput.value.trim();
+      if (commentText) {
+        const comment = document.createElement('div');
+        comment.classList.add('comment');
+        comment.textContent = commentText;
+        commentsContainer.appendChild(comment);
+        commentInput.value = '';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mercure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Mercure</h1>
+  </header>
+
+  <main>
+    <section class="planet-details">
+      <img src="image2.png" alt="Mercury">
+    </section>
+
+    <div class="definition">
+        <h2>Characteristics</h2>
+        
+        <p><strong>Name:</strong> Mercury</p>
+        <p><strong>Position:</strong> 1st planet in the solar system, closest to the Sun.</p>
+        <p><strong>Status:</strong> Terrestrial (rocky) planet. No significant atmosphere.</p>
+        <p><strong>Other Information:</strong> Mercury is a small planet with temperatures that vary greatly between day and night due to its lack of atmosphere. A day on Mercury lasts 58.6 Earth days. Its surface is marked by craters and fractures.</p>
+        <p><strong>Characteristics:</strong>  
+          Closest to the Sun. No significant atmosphere. Very hot during the day, very cold at night.
+        </p>
+        <p><strong>Interesting Fact:</strong>  
+          Its rotation is very slow; a day on Mercury lasts about 58.6 Earth days.
+        </p>
+    </div>
+    <br>
+        <iframe width="560" height="315" src="Mercury.mp4" frameborder="0" allowfullscreen ></iframe>
+      </div>
+    </section>
+
+    <section class="comments-section">
+      <h2>Commentaires</h2>
+      <textarea id="comment-input" placeholder="Laissez un commentaire..." rows="4"></textarea>
+      <button id="submit-comment">Publier</button>
+      <div id="comments-container"></div>
+    </section>
+  </main>
+
+  <script>
+    const commentInput = document.getElementById('comment-input');
+    const submitButton = document.getElementById('submit-comment');
+    const commentsContainer = document.getElementById('comments-container');
+
+    submitButton.addEventListener('click', () => {
+      const commentText = commentInput.value.trim();
+      if (commentText) {
+        const comment = document.createElement('div');
+        comment.classList.add('comment');
+        comment.textContent = commentText;
+        commentsContainer.appendChild(comment);
+        commentInput.value = '';
+      }
+    });
+  </script>
+</body>
+</html>

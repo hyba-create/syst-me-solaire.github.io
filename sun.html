@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sun</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Sun</h1>
+  </header>
+
+  <div class="planet-details">
+    <img src="image1.png" alt="Sun">
+  </div>
+
+  <div class="definition">
+    <h2>Characteristics</h2>
+    
+    <p><strong>Name:</strong> Sun</p>
+    <p><strong>Position:</strong> Center of the solar system.</p>
+    <p><strong>Status:</strong> G-type main-sequence star (Yellow Dwarf).</p>
+    <p><strong>Other Information:</strong> The Sun is a massive ball of hot plasma primarily composed of hydrogen and helium. It accounts for about 99.86% of the total mass of the solar system. The Sun's core is the site of nuclear fusion, which produces its energy and emits light and heat essential for life on Earth.</p>
+    <p><strong>Characteristics:</strong>  
+      Central star of the solar system. Source of light and heat. Composed mainly of hydrogen and helium.
+    </p>
+    <p><strong>Interesting Fact:</strong>  
+      The Sun's diameter is about 1.39 million kilometers (864,000 miles), and it has a surface temperature of approximately 5,500 degrees Celsius (9,932 degrees Fahrenheit).
+    </p>
+</div>
+
+  <br>
+      <iframe width="560" height="315" src="Solar Eclipse.mp4" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div>
+      <img src="https://solarsystem.nasa.gov/system/feature_items/images/33_mercury_transit.jpg" alt="Transit de Mercure">
+    </div>
+  </div>
+
+  <div class="comments-section">
+    <h2>Commentaires</h2>
+    <textarea id="comment-input" placeholder="Laissez un commentaire..." rows="4"></textarea>
+    <button id="submit-comment">Publier</button>
+    <div id="comments-container"></div>
+  </div>
+
+  <script>
+    const commentInput = document.getElementById('comment-input');
+    const submitButton = document.getElementById('submit-comment');
+    const commentsContainer = document.getElementById('comments-container');
+
+    submitButton.addEventListener('click', () => {
+      const commentText = commentInput.value.trim();
+      if (commentText) {
+        const comment = document.createElement('div');
+        comment.classList.add('comment');
+        comment.textContent = commentText;
+        commentsContainer.appendChild(comment);
+        commentInput.value = '';
+      }
+    });
+  </script>
+</body>
+</html>

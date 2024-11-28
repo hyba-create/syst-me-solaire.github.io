@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Venus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Venus</h1>
+  </header>
+
+  <div class="planet-details">
+    <img src="image3.png" alt="Venus">
+  </div>
+
+  <div class="definition">
+    <h2>Characteristics</h2>
+    
+    <p><strong>Name:</strong> Venus</p>
+    <p><strong>Position:</strong> 2nd planet in the solar system, between Mercury and Earth.</p>
+    <p><strong>Status:</strong> Terrestrial (rocky) planet. Thick atmosphere mainly composed of carbon dioxide, with clouds of sulfuric acid.</p>
+    <p><strong>Other Information:</strong> Venus is often called Earth's "sister planet" due to their similar size and composition. It has a runaway greenhouse effect, making it the hottest planet in the solar system. Its surface features volcanoes, mountains, and vast plains.</p>
+    <p><strong>Characteristics:</strong>  
+      Thick, toxic atmosphere. Extremely high surface temperatures. Volcanically active.
+    </p>
+    <p><strong>Interesting Fact:</strong>  
+      A day on Venus is longer than a year on Venus; it takes about 243 Earth days to rotate once on its axis, and about 225 Earth days to orbit the Sun.
+    </p>
+</div>
+<br>
+      <iframe width="560" height="315" src="Venus.mp4" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div>
+      <img src="https://solarsystem.nasa.gov/system/feature_items/images/33_mercury_transit.jpg" alt="Transit de Mercure">
+    </div>
+  </div>
+
+  <div class="comments-section">
+    <h2>Commentaires</h2>
+    <textarea id="comment-input" placeholder="Laissez un commentaire..." rows="4"></textarea>
+    <button id="submit-comment">Publier</button>
+    <div id="comments-container"></div>
+  </div>
+
+  <script>
+    const commentInput = document.getElementById('comment-input');
+    const submitButton = document.getElementById('submit-comment');
+    const commentsContainer = document.getElementById('comments-container');
+
+    submitButton.addEventListener('click', () => {
+      const commentText = commentInput.value.trim();
+      if (commentText) {
+        const comment = document.createElement('div');
+        comment.classList.add('comment');
+        comment.textContent = commentText;
+        commentsContainer.appendChild(comment);
+        commentInput.value = '';
+      }
+    });
+  </script>
+</body>
+</html>
