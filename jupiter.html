@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jupiter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Jupiter</h1>
+  </header>
+
+  <div class="planet-details">
+    <img src="image6.png" alt="Jupiter">
+  </div>
+
+  <div class="definition">
+    <h2>Characteristics</h2>
+    
+    <p><strong>Name:</strong> Jupiter</p>
+    <p><strong>Position:</strong> 5th planet in the solar system, after the asteroid belt.</p>
+    <p><strong>Status:</strong> Gas giant. Dense atmosphere primarily composed of hydrogen and helium.</p>
+    <p><strong>Other Information:</strong> Jupiter is the largest planet in the solar system. It has a Great Red Spot, a gigantic storm. Jupiter has colorful cloud bands and more than 75 known moons, including the four large Galilean moons.</p>
+    <p><strong>Characteristics:</strong>  
+      Largest planet in the solar system. Dense and complex atmosphere. Numerous moons.
+    </p>
+    <p><strong>Interesting Fact:</strong>  
+      A day on Jupiter lasts about 10 Earth hours due to its rapid rotation.
+    </p>
+</div>
+<br>
+
+    <div>
+      <iframe width="560" height="315" src="Jupiter.mp4" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+
+  <div class="comments-section">
+    <h2>Commentaires</h2>
+    <textarea id="comment-input" placeholder="Laissez un commentaire..." rows="4"></textarea>
+    <button id="submit-comment">Publier</button>
+    <div id="comments-container"></div>
+  </div>
+
+  <script>
+    const commentInput = document.getElementById('comment-input');
+    const submitButton = document.getElementById('submit-comment');
+    const commentsContainer = document.getElementById('comments-container');
+
+    submitButton.addEventListener('click', () => {
+      const commentText = commentInput.value.trim();
+      if (commentText) {
+        const comment = document.createElement('div');
+        comment.classList.add('comment');
+        comment.textContent = commentText;
+        commentsContainer.appendChild(comment);
+        commentInput.value = '';
+      }
+    });
+  </script>
+</body>
+</html>

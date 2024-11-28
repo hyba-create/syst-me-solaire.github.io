@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Neptune</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Neptune</h1>
+  </header>
+
+  <div class="planet-details">
+    <img src="image9.png" alt="Neptune">
+  </div>
+
+  <div class="definition">
+    <h2>Characteristics</h2>
+    
+    <p><strong>Name:</strong> Neptune</p>
+    <p><strong>Position:</strong> 8th planet in the solar system, farthest from the Sun.</p>
+    <p><strong>Status:</strong> Gas giant. Atmosphere mainly composed of hydrogen, helium, and methane.</p>
+    <p><strong>Other Information:</strong> Neptune is known for its extremely violent winds and deep blue color, which is due to the presence of methane. It has several faint rings and 14 known moons, the largest of which is Triton.</p>
+    <p><strong>Characteristics:</strong>  
+      Violent winds, distinctive blue color. Methane-rich atmosphere.
+    </p>
+    <p><strong>Interesting Fact:</strong>  
+      A year on Neptune lasts about 165 Earth years.
+    </p>
+</div>
+<br>
+    <div>
+      <iframe width="560" height="315" src="Neptune.mp4" frameborder="0" allowfullscreen></iframe>
+    </div>
+   
+
+  <div class="comments-section">
+    <h2>Commentaires</h2>
+    <textarea id="comment-input" placeholder="Laissez un commentaire..." rows="4"></textarea>
+    <button id="submit-comment">Publier</button>
+    <div id="comments-container"></div>
+  </div>
+
+  <script>
+    const commentInput = document.getElementById('comment-input');
+    const submitButton = document.getElementById('submit-comment');
+    const commentsContainer = document.getElementById('comments-container');
+
+    submitButton.addEventListener('click', () => {
+      const commentText = commentInput.value.trim();
+      if (commentText) {
+        const comment = document.createElement('div');
+        comment.classList.add('comment');
+        comment.textContent = commentText;
+        commentsContainer.appendChild(comment);
+        commentInput.value = '';
+      }
+    });
+  </script>
+</body>
+</html>

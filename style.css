@@ -1,0 +1,119 @@
+body { 
+    font-family: Arial, sans-serif;
+    background-color: #10101a;
+    color: white;
+    text-align: center; 
+    margin: 0; padding: 0; 
+    }
+
+h1 {
+     margin: 20px 0;
+    } 
+    
+.container { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 20px; 
+    } 
+
+.planet { 
+    width: 150px; 
+    text-align: center;
+} 
+
+.planet img { 
+    width: 100%; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); 
+    transition: transform 0.3s ease; 
+} 
+
+.planet img:hover { 
+    transform: scale(1.1); 
+} 
+
+.planet-details img { 
+    width: 300px; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); 
+    margin: 20px 0; 
+} 
+
+.planet-details { 
+    padding: 20px;
+ } 
+ 
+ .comments-section {
+     margin: 20px auto; 
+     max-width: 600px; 
+     text-align: left; 
+     padding: 10px; 
+     background-color: #1a1a2e; 
+     border-radius: 8px; 
+    } 
+    
+    textarea { 
+        width: 100%; 
+        margin-bottom: 10px; 
+        padding: 10px; 
+        border-radius: 5px; 
+        border: none; 
+        resize: none; 
+    } 
+    
+    button { 
+        padding: 10px 20px; 
+        background-color: #4CAF50; 
+        color: white; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer; 
+    } 
+    
+    button:hover { 
+        background-color: #45a049; 
+    } 
+    
+    #comments-container p { 
+        background-color: #2a2a4e; 
+        padding: 10px; 
+        border-radius: 5px; 
+        margin: 10px 0; 
+    }
+
+    .definition h2 { 
+        font-size: 26px; 
+        color: #bfd4e9; 
+        border-bottom: 2px solid #2c3e50; 
+        padding-bottom: 10px; 
+        margin-bottom: 15px; 
+    }
+
+    .definition p { 
+        font-size: 18px; 
+        color: #ffffff; 
+        line-height: 1.8; 
+        margin-bottom: 10px; 
+    } 
+    
+    .definition p strong { 
+        color: #9067ad; 
+    } 
+    
+    .definition p:last-child { 
+        margin-bottom: 0; 
+    } 
+    
+    @media (max-width: 600px) { 
+        .definition { 
+            padding: 15px; 
+        } 
+        .definition h2 { 
+            font-size: 22px; 
+        } 
+        .definition p { 
+            font-size: 16px; 
+        } 
+    }

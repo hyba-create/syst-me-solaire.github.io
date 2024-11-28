@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mars</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Mars</h1>
+  </header>
+
+  <div class="planet-details">
+    <img src="image5.png" alt="Mars">
+  </div>
+
+ <div class="definition">
+    <h2>Caractéristiques</h2>
+    
+    <p><strong>Nom :</strong> Mercure</p>
+    <p><strong>Position :</strong> 1ère planète du système solaire, la plus proche du Soleil.</p>
+    <p><strong>État :</strong> Planète tellurique (rocheuse). Pas d’atmosphère significative.</p>
+    <p><strong>Autres informations :</strong> Mercure est une petite planète, avec une température variant énormément entre le jour et la nuit en raison de son absence d'atmosphère. Un jour sur Mercure dure 58,6 jours terrestres. Sa surface est marquée par des cratères et des fissures.</p>
+  <p><strong>Caractéristiques :</strong>  
+      Plus proche du Soleil. Pas d’atmosphère significative. Très chaud le jour, très froid la nuit.
+    </p>
+    <p><strong>Fait intéressant :</strong>  
+      Sa rotation est très lente ; un jour sur Mercure dure environ 58,6 jours terrestres.
+    </p>
+  </div>
+<br>
+      <iframe width="560" height="315" src="Mars.mp4" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div>
+      <img src="https://solarsystem.nasa.gov/system/feature_items/images/33_mercury_transit.jpg" alt="Transit de Mercure">
+    </div>
+  </div>
+
+  <div class="comments-section">
+    <h2>Commentaires</h2>
+    <textarea id="comment-input" placeholder="Laissez un commentaire..." rows="4"></textarea>
+    <button id="submit-comment">Publier</button>
+    <div id="comments-container"></div>
+  </div>
+
+  <script>
+    const commentInput = document.getElementById('comment-input');
+    const submitButton = document.getElementById('submit-comment');
+    const commentsContainer = document.getElementById('comments-container');
+
+    submitButton.addEventListener('click', () => {
+      const commentText = commentInput.value.trim();
+      if (commentText) {
+        const comment = document.createElement('div');
+        comment.classList.add('comment');
+        comment.textContent = commentText;
+        commentsContainer.appendChild(comment);
+        commentInput.value = '';
+      }
+    });
+  </script>
+</body>
+</html>
