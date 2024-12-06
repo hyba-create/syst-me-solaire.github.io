@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUR SOLAR SYSTEM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="toolbar-container">
+        <nav class="toolbar-menu">
+            <a href="#" id="home-link">Home</a>
+            <a href="#planets">Planets</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="#news">News</a>
+        </nav>
+        <input 
+            type="text" 
+            id="planetSearch" 
+            class="search-container" 
+            placeholder="🔍 search"
+            oninput="searchPlanets()"
+        >
+        <div class="toolbar-user-actions">
+            <button class="toolbar-btn" onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <img id="main-image" class="img1" src="first.png" alt="Image 1">
+    <h1>OUR SOLAR SYSTEM</h1>
+
+    <!-- Section des planètes avec un ID pour le lien -->
+    <div class="image-container" id="planets">
+        <figure onmouseover="showDescription('The Sun is the star at the center of our solar system.')" onmouseout="hideDescription()">
+            <a href="sun.html">
+                <img id="sun" src="image1.png" alt="Sun">
+                <figcaption>Sun</figcaption>
+            </a>
+        </figure>
+
+        <figure onmouseover="showDescription('Mercury is the smallest planet in our solar system.')" onmouseout="hideDescription()">
+            <a href="mercury.html">
+                <img id="mercury" src="image2.png" alt="Mercury">
+                <figcaption>Mercury</figcaption>
+            </a>
+        </figure>
+
+        <figure onmouseover="showDescription('Venus is the hottest planet in the solar system.')" onmouseout="hideDescription()">
+            <a href="venus.html">
+                <img id="venus" src="image3.png" alt="Venus">
+                <figcaption>Venus</figcaption>
+            </a>
+        </figure>
+
+        <figure onmouseover="showDescription('Earth is the only planet known to support life.')" onmouseout="hideDescription()">
+            <a href="earth.html">
+                <img id="earth" src="image4.png" alt="Earth">
+                <figcaption>Earth</figcaption>
+            </a>
+        </figure>
+
+        <figure onmouseover="showDescription('Mars is known as the Red Planet because of its reddish appearance.')" onmouseout="hideDescription()">
+            <a href="mars.html">
+                <img id="mars" src="image5.png" alt="Mars">
+                <figcaption>Mars</figcaption>
+            </a>
+        </figure>
+
+        <figure onmouseover="showDescription('Jupiter is the largest planet in the solar system.')" onmouseout="hideDescription()">
+            <a href="jupiter.html">
+                <img id="jupiter" src="image6.png" alt="Jupiter">
+                <figcaption>Jupiter</figcaption>
+            </a>
+        </figure>
+
+        <figure onmouseover="showDescription('Saturn is famous for its beautiful ring system.')" onmouseout="hideDescription()">
+            <a href="saturn.html">
+                <img id="saturn" src="image7.png" alt="Saturn">
+                <figcaption>Saturn</figcaption>
+            </a>
+        </figure>
+
+        <figure onmouseover="showDescription('Uranus rotates on its side, making it unique among planets.')" onmouseout="hideDescription()">
+            <a href="uranus.html">
+                <img id="uranus" src="image8.png" alt="Uranus">
+                <figcaption>Uranus</figcaption>
+            </a>
+        </figure>
+
+        <figure onmouseover="showDescription('Neptune is the farthest planet from the Sun in our solar system.')" onmouseout="hideDescription()">
+            <a href="neptune.html">
+                <img id="neptune" src="image9.png" alt="Neptune">
+                <figcaption>Neptune</figcaption>
+            </a>
+        </figure>
+    </div>
+
+    <!-- Zone de description des planètes -->
+    <div id="description" style="margin-top: 20px; text-align: center; color: white; font-size: 18px;"></div>
+
+    <script>
+        // Dictionnaire des planètes et leurs pages
+        const planetPages = {
+            mercury: "mercury.html",
+            venus: "venus.html",
+            earth: "earth.html",
+            mars: "mars.html",
+            jupiter: "jupiter.html",
+            saturn: "saturn.html",
+            uranus: "uranus.html",
+            neptune: "neptune.html"
+        };
+
+        // Fonction pour afficher une description
+        function showDescription(text) {
+            const description = document.getElementById('description');
+            description.textContent = text;
+        }
+
+        // Fonction pour cacher la description
+        function hideDescription() {
+            const description = document.getElementById('description');
+            description.textContent = '';
+        }
+
+        // Fonction de recherche
+        function searchPlanets() {
+            const searchInput = document.getElementById("planetSearch").value.toLowerCase().trim();
+            
+            // Vérifie si l'entrée correspond à une planète
+            if (planetPages[searchInput]) {
+                window.location.href = planetPages[searchInput];
+            }
+        }
+
+        // Créer les étoiles en arrière-plan
+        function createStars() {
+            const starsContainer = document.createElement('div');
+            starsContainer.className = 'stars';
+
+            for (let i = 0; i < 150; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.animationDelay = `${Math.random() * 2}s`;
+                starsContainer.appendChild(star);
+            }
+
+            document.body.appendChild(starsContainer);
+        }
+        createStars();
+    </script>
+</body>
+
+</html>

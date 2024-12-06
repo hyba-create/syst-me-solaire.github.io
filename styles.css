@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.toolbar-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: rgba(33, 33, 42, 0.8);
+    backdrop-filter: blur(10px); 
+    padding: 12px 30px;
+    box-shadow: 0 2px 10px rgba(18, 17, 17, 0.2); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100; 
+}
+
+.toolbar-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    list-style: none;
+}
+
+.toolbar-menu a {
+    color: #ecf0f1; 
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 6px; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.toolbar-menu a:hover {
+    background-color: rgba(71, 111, 138, 0.2); 
+    color: #3498db; 
+}
+
+.toolbar-user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.toolbar-btn {
+    background-color: #1e72d9; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.toolbar-btn:hover {
+    background-color: #2980b9; 
+}
+
+.toolbar-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5);
+}
+
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    padding: 20px;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+img {
+    width: 95%;
+    height: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 1.5s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+.image-container {
+    display: flex; 
+    overflow-x: auto; 
+    white-space: nowrap; 
+    padding: 20px;
+    
+}
+
+.image-container figure {
+    flex-shrink: 0; 
+    text-align: center;
+    margin: 0;
+}
+
+#sun {
+    max-width: 200px; 
+   
+}
+
+#mercury{
+    max-width: 150px; 
+    
+}
+
+#venus {
+    max-width: 100px; 
+    
+}
+
+#earth{
+    max-width: 150px; 
+    
+}
+
+#mars {
+    max-width: 150px; 
+
+}
+
+#jupiter {
+    max-width: 150px; 
+   
+}
+
+#saturn{
+    max-width: 150px; 
+ 
+}
+
+#uranus{
+    max-width: 150px; 
+    
+}
+
+#neptune {
+    max-width: 150px; 
+}
+
+
+figcaption {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+
+.image-container figure figcaption {
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; 
+    display: inline-block; 
+}
+
+.image-container figure figcaption:hover {
+    transform: scale(1.2); 
+    color: #1737d6; 
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); 
+}
+.image-container figure img {
+    transition: transform 0.3s ease-in-out; 
+}
+
+.image-container figure img:hover {
+    transform: scale(1.1); 
+    
+    border-radius: 10px; 
+}
+
+
+
+h1 {
+    margin-top: 100px; 
+    margin-bottom: 15px; 
+    font-size: 4rem;
+    color: #f39c12; 
+    font-family: 'Arial', sans-serif; 
+    text-align: center; 
+    animation: slideIn 2s ease-out, colorChange 3s infinite alternate; 
+}
+
+@keyframes colorChange {
+    0% {
+        color: #f39c12; 
+    }
+    50% {
+        color: #3498db; 
+    }
+    100% {
+        color: #e74c3c; 
+    }
+}
+
+
+.image-container {
+    margin-top: 150px; 
+    margin-bottom: 10px; 
+}
+
+#description {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #ecf0f1;
+    background: rgba(9, 5, 18, 0.6);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.search-container{
+    background: transparent;
+    border-radius:20px;
+    padding : 10px 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.8s;
+    color: wheat;
+
+
+}
+.definition{
+    color: white;
+    align-items: center;
+}

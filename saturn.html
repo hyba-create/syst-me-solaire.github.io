@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Saturn</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Saturn</h1>
+  </header>
+
+  <div class="planet-details">
+    <img src="image7.png" alt="Saturn">
+  </div>
+
+  <div class="definition">
+    <h2>Characteristics</h2>
+    
+    <p><strong>Name:</strong> Saturn</p>
+    <p><strong>Position:</strong> 6th planet in the solar system, known for its spectacular ring system.</p>
+    <p><strong>Status:</strong> Gas giant. Atmosphere primarily composed of hydrogen and helium.</p>
+    <p><strong>Other Information:</strong> Saturn is famous for its extensive ring system, which is made of ice and rock particles. It has over 80 known moons, with Titan being the largest and one of the most interesting due to its thick atmosphere and liquid hydrocarbon lakes.</p>
+    <p><strong>Characteristics:</strong>  
+      Prominent ring system. Multiple moons. Low density—Saturn would float in water if a large enough body of water existed!
+    </p>
+    <p><strong>Interesting Fact:</strong>  
+      A day on Saturn lasts about 10.7 Earth hours, and its rings are composed mainly of water ice.
+    </p>
+</div>
+
+<br>
+  
+      <iframe width="560" height="315" src="Saturn.mp4" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div>
+      <img src="https://solarsystem.nasa.gov/system/feature_items/images/33_mercury_transit.jpg" alt="Transit de Mercure">
+    </div>
+  </div>
+
+  <div class="comments-section">
+    <h2>Commentaires</h2>
+    <textarea id="comment-input" placeholder="Laissez un commentaire..." rows="4"></textarea>
+    <button id="submit-comment">Publier</button>
+    <div id="comments-container"></div>
+  </div>
+
+  <script>
+    const commentInput = document.getElementById('comment-input');
+    const submitButton = document.getElementById('submit-comment');
+    const commentsContainer = document.getElementById('comments-container');
+
+    submitButton.addEventListener('click', () => {
+      const commentText = commentInput.value.trim();
+      if (commentText) {
+        const comment = document.createElement('div');
+        comment.classList.add('comment');
+        comment.textContent = commentText;
+        commentsContainer.appendChild(comment);
+        commentInput.value = '';
+      }
+    });
+  </script>
+</body>
+</html>
